@@ -11,11 +11,6 @@ int create_mat(){
     return 1;
 }
 
-int is_path(int i, int j){
-    int x = shortest_path(i,j);
-    return x;
-}
-
 int shortest_path_mat(int *temp){
     for(int k=0; k<10; k++){
         for(int i=0; i<10; i++){
@@ -48,6 +43,11 @@ int shortest_path(int i, int j){
         return -1;
     }
     return shortest;
+}
+
+int is_path(int i, int j){
+    int x = shortest_path(i,j);
+    return x;
 }
 
 
