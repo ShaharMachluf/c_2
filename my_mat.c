@@ -42,7 +42,7 @@ int shortest_path(int i, int j){
             temp[i][j] = mat[i][j];
         }
     }
-    shortest_path_mat(temp[0]);
+    shortest_path_mat(&temp[0][0]);
     int shortest = temp[i][j]; //temp[i][j] contains the shortest path between i and j
     if(shortest == 0){ //if there is no path
         return -1;
