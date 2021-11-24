@@ -4,9 +4,9 @@ MAIN=main.o
 MAT=my_mat.o
 FLAGS=-Wall -g
 
-all: mains
+all: connections
 connections: $(MAIN) $(MAT)
-	$(CC) $(FLAGS) -o mains $(MAIN) $(MAT)
+	$(CC) $(FLAGS) -o connections $(MAIN) $(MAT)
 $(MAIN): main.c my_mat.h
 	$(CC) $(FLAGS) -c main.c 
 $(MAT): my_mat.c my_mat.h
@@ -14,4 +14,4 @@ $(MAT): my_mat.c my_mat.h
 
 .PHONY: clean all
 clean:
-	rm -f *.o *.a *.so mains maindloop maindrec
+	rm -f *.o connections
