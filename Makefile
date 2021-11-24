@@ -5,7 +5,7 @@ MAT=my_mat.o
 FLAGS=-Wall -g
 
 all: mains
-mains: $(MAIN) $(MAT)
+connections: $(MAIN) $(MAT)
 	$(CC) $(FLAGS) -o mains $(MAIN) $(MAT)
 $(MAIN): main.c my_mat.h
 	$(CC) $(FLAGS) -c main.c 
