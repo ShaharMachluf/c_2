@@ -3,8 +3,8 @@
 
 int main(){
     while(1){
-        char c;
-        int i, j;
+        char c = ' ';
+        int i = 0, j = 0;
         scanf("%c", &c);
         if(c == 'A'){
             create_mat();
@@ -23,7 +23,7 @@ int main(){
             int x = shortest_path(i, j);
             printf("%d\n", x);
         }
-        else{
+        else if(c == 'D'){
             return 0;
         }
     }
