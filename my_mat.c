@@ -17,8 +17,12 @@ int shortest_path_mat(int temp[][10]){
             for(int j=0; j<10; j++){
                 if((temp[i][k] == 0 && i != k) || (temp[k][j] == 0 && k != j)){
                     //in case the path between i and k or between k and j does not exist 
-                    temp[i][j] = mat[i][j];
-                }else{
+                    temp[i][j] = temp[i][j];
+                }
+                else if(temp[i][j] == 0){
+                    temp[i][j] = temp[i][k]+temp[k][j];             
+                }
+                else{
                     //insert the minimum
                     temp[i][j] =((temp[i][j] < (temp[i][k]+temp[k][j])) ? temp[i][j] : (temp[i][k]+temp[k][j])); 
                 }
@@ -49,5 +53,4 @@ int is_path(int i, int j){
     int x = shortest_path(i,j);
     return x;
 }
-
 
