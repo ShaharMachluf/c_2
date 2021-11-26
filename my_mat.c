@@ -34,6 +34,9 @@ int shortest_path_mat(int temp[][10]){
 
 //make a mat containing the shortest paths between every two vertices
 int shortest_path(int i, int j){
+    if(i == j){
+        return -1;
+    }
     int temp [10][10];
     //deep copy mat to temp
     for(int i=0; i<10; i++){
